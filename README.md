@@ -1,44 +1,150 @@
 RAG-Based Multi-Document QnA System
 
-Overview:-
+Python | RAG | FAISS | Gemini API | Streamlit
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline that allows users to upload multiple PDF documents and ask contextual questions. The system uses vector embeddings and semantic search to retrieve relevant document chunks before generating responses using a Large Language Model.
+A Retrieval-Augmented Generation (RAG) based application that allows users to upload multiple PDF documents and perform contextual question-answering using semantic search and Large Language Models.
 
+📌 Overview
 
-Features:-
+This project implements a complete RAG pipeline that enables:
 
-Multi-PDF upload
-Semantic search using FAISS
-Context-aware chat history
+Uploading multiple PDF documents
+
+Extracting and chunking document text
+
+Generating embeddings
+
+Performing semantic search using a vector database
+
+Producing context-aware answers using Gemini LLM
+
+The system retrieves the most relevant document chunks before generating responses, improving factual accuracy and contextual relevance.
+
+🚀 Features
+
+Multi-PDF document upload support
+
+Automated text extraction using PyPDF
+
+Intelligent text chunking for efficient retrieval
+
+Vector embedding generation using Gemini API
+
+FAISS-based semantic search
+
+Context-aware conversational memory
+
 LLM-powered answer generation
-Streamlit UI interface
 
+Interactive Streamlit user interface
 
-Tech Stack:-
+🏗️ Architecture
+
+Document Upload (PDF files)
+
+Text Extraction (PyPDF)
+
+Text Chunking
+
+Embedding Generation (Gemini Embeddings)
+
+Vector Storage (FAISS)
+
+Semantic Retrieval
+
+Context-Aware Response Generation (Gemini LLM)
+
+🛠️ Tech Stack
 
 Python
+
 Streamlit
+
 Gemini API
+
 LangChain
-FAISS
+
+FAISS (Vector Store)
+
 PyPDF
 
+dotenv
 
-How to Run:-
+📂 Project Structure
+RAG-DOCUMENT-QnA/
+│
+├── DocReader.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
 
-Clone the repository
-Create a virtual environment
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/RajhansJain/RAG-DOCUMENT-QnA.git
+cd RAG-DOCUMENT-QnA
 
-Install dependencies:
+2️⃣ Create Virtual Environment
+python -m venv venv
+
+
+Activate:
+
+Windows
+
+venv\Scripts\activate
+
+
+Mac/Linux
+
+source venv/bin/activate
+
+3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-Create .env file and add:
+4️⃣ Configure Environment Variables
+
+Create a .env file in the root directory:
+
 GEMINI_API_KEY=your_api_key_here
 
-Run:
-streamlit run app.py
+5️⃣ Run the Application
+streamlit run DocReader.py
 
-Future Improvements:-
-Cloud deployment
-Authentication
+🎥 Demo
+
+This application demonstrates:
+
+Multi-document upload
+
+Contextual Q&A over uploaded PDFs
+
+Chat-based interaction
+
+Semantic search powered retrieval
+
+(Demo video can be added here)
+
+🔮 Future Improvements
+
+Cloud deployment (Streamlit Cloud / Render)
+
+Authentication layer
+
 Optimized chunking strategy
+
+Persistent vector storage
+
+UI enhancements
+
+Docker containerization
+
+📬 Contact
+
+Rajhans Jain
+B.Tech, Jabalpur Engineering College
+Email: rajhansjain19@gmail.com
+
+GitHub: https://github.com/RajhansJain
+
+LinkedIn: https://www.linkedin.com/in/rajhans-jain-790b7a303/
